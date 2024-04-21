@@ -1,0 +1,120 @@
+/* ========== Imports ========== */
+@import url('https://fonts.cdnfonts.com/css/abc-ginto-nord-unlicensed-trial');
+@import url('https://fonts.cdnfonts.com/css/gg-sans-2');
+
+/* ========== CSS Variables ========== */
+:root {
+    /* Colors */
+    --main-color: #5865f2;
+    --bg-color: #404eed;
+    --white-color: #ffffff;
+    --black-color: #000000;
+
+    /* Fonts */
+    --h1-font: 'ABC Ginto Nord Unlicensed Trial', sans-serif;
+    --text-font: 'gg sans Normal', sans-serif;
+    --text-font-semibold: 'gg sans SemiBold', sans-serif;
+    --text-font-bold: 'gg sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+
+/* ---------- Hero Section ---------- */
+
+header {
+    padding: 0 0 12.5rem 0;
+
+    background-color: var(--bg-color);
+    background-image:
+        url("/images/hero-section-1.svg"),
+        url("/images/hero-section-2.svg"),
+        URL("/images/hero-section-3.svg");
+    background-repeat: no-repeat;
+    background-position: -20% 100%, 121% 100%, 51% 92%;
+    background-size: 42%, 42%, auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+}
+
+nav {
+    width: 100%;
+    padding: 1.35rem 7.5rem 6rem 7.5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2.3rem;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-family: var(--text-font-semibold);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+nav .open-discord-button {
+    padding: .6rem 1rem;
+
+    background-color: var(--white-color);
+
+    text-decoration: none;
+    color: var(--black-color);
+    font-family: var(--text-font-bold);
+    font-size: .9rem;
+    font-weight: 700;
+
+    border-radius: 1.5rem;
+
+    transition: color .3s, box-shadow .3s;
+}
+
+nav .open-discord-button:hover {
+    color: var(--main-color);
+    box-shadow: 0 .35rem .5rem rgb(0, 0, 0, .2);
+}
+
+.hero-section {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-family: var(--h1-font);
+    color: var(--white-color);
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.hero-section p {
+    color: var(--white-color);
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2.1rem;
+}
