@@ -6,22 +6,25 @@
 :root {
     /* Colors */
     --main-color: #5865f2;
+    --desc-title-color: #23272a;
     --bg-color: #404eed;
+    --bg-grey: #f6f6f6;
     --white-color: #ffffff;
     --black-color: #000000;
 
     /* Fonts */
-    --h1-font: 'ABC Ginto Nord Unlicensed Trial', sans-serif;
-    --text-font: 'gg sans Normal', sans-serif;
-    --text-font-semibold: 'gg sans SemiBold', sans-serif;
-    --text-font-bold: 'gg sans', sans-serif;
+    --ginto-font: 'ABC Ginto Nord Unlicensed Trial', sans-serif;
+    --ginto-font-normal: 'ABC Ginto Normal Unlicensed Trial', sans-serif;
+    --gg-font: 'gg sans Normal', sans-serif;
+    --gg-font-semibold: 'gg sans SemiBold', sans-serif;
+    --gg-font-bold: 'gg sans', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--text-font);
+    font-family: var(--gg-font);
 }
 
 /* ---------- Hero Section ---------- */
@@ -67,7 +70,7 @@ nav li {
 nav li a {
     text-decoration: none;
     color: var(--white-color);
-    font-family: var(--text-font-semibold);
+    font-family: var(--gg-font-semibold);
     font-size: 1rem;
     font-weight: 600;
 
@@ -85,7 +88,7 @@ nav .open-discord-button {
 
     text-decoration: none;
     color: var(--black-color);
-    font-family: var(--text-font-bold);
+    font-family: var(--gg-font-bold);
     font-size: .9rem;
     font-weight: 700;
 
@@ -104,13 +107,13 @@ nav .open-discord-button:hover {
 
     display: flex;
     flex-flow: column nowrap;
-    gap: 2.1rem;
     justify-content: center;
     align-items: center;
+    gap: 2.1rem;
 }
 
 .hero-section h1 {
-    font-family: var(--h1-font);
+    font-family: var(--ginto-font);
     color: var(--white-color);
     font-size: 3.5rem;
     font-weight: 800;
@@ -123,4 +126,92 @@ nav .open-discord-button:hover {
     font-weight: 400;
     text-align: center;
     line-height: 2.1rem;
+}
+
+/* ---------- Main ---------- */
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.about {
+    width: 100%;
+}
+
+.about .description:nth-child(even) {
+    background-color: var(--bg-grey);
+}
+
+.description {
+    width: 100%;
+    padding: 7.2rem 14rem 7.2rem 7.6rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 8rem;
+}
+
+.description-text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.description-text h2 {
+    color: var(--desc-title-color);
+    font-family: var(--gg-font-bold);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+}
+
+.description-text p {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.about-4 {
+    width: 100%;
+    padding: 7.2rem 7.2rem;
+
+    background-color: var(--bg-grey);
+
+    text-align: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-4 .description-text h2 {
+    font-family: var(--ginto-font);
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.about-4 .description-text p {
+    margin-inline: 7rem;
+}
+
+.about-4 .start {
+    width: 100%;
+    padding: 6rem 0 3rem 0;
+
+    background-image: url("/images/about-4-bg.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 85%;
+}
+
+.about-4 .start h3 {
+    font-family: var(--ginto-font-normal);
+    font-weight: 700;
+    font-size: 2rem;
 }
