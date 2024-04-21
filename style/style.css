@@ -70,6 +70,12 @@ nav li a {
     font-family: var(--text-font-semibold);
     font-size: 1rem;
     font-weight: 600;
+
+    transition: text-decoration .2s;
+}
+
+nav li a:hover {
+    text-decoration: underline;
 }
 
 nav .open-discord-button {
